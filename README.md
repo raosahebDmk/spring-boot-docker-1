@@ -1,14 +1,17 @@
 docker login
 
 docker ps -a
+
+build app and create jar
 ----------------
-**build app and create jar**
   docker build -t spring-boot-docker.jar .
 
-**run the image**
+run the image
+----------------
   docker run -p 9090:8080 spring-boot-docker.jar 
 
-**push image to docker hub:**
+push image to docker hub:
+----------------
 
 docker tag spring-boot-docker.jar 973008/spring-boot-docker.jar
 dcoker push 973008/spring-boot-docker.jar
